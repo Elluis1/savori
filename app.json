@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "Savori",
+    "slug": "savori",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Savori necesita acceso a tus fotos y videos para adjuntarlos a las recetas.",
+        "NSCameraUsageDescription": "Savori puede usar la cámara para documentar pasos de cocina."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#F7F3EE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "READ_MEDIA_IMAGES",
+        "READ_MEDIA_VIDEO",
+        "READ_EXTERNAL_STORAGE"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-sqlite",
+      "expo-sharing",
+      "expo-asset",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Permití acceder a la galería para agregar fotos y videos a tus recetas."
+        }
+      ]
+    ]
+  }
+}
